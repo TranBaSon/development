@@ -1,0 +1,50 @@
+﻿<Page 
+    x:Class="ManageApp.Pages.StudentForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ManageApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#e5ffff">
+
+    <StackPanel Width="800" Margin="0 30">
+        <StackPanel>
+            <TextBox FontSize="18" Header="RollNumber" x:Name="rollNumber"/>
+            <TextBlock x:Name="errRollNumber" Foreground="Red" Text=""/>
+        </StackPanel>
+        <StackPanel Margin="0 20 0 0">
+            <TextBox FontSize="18" Header="Full Name" x:Name="fullName"/>
+            <TextBlock x:Name="errFullName" Foreground="Red" Text=""/>
+        </StackPanel>
+        <StackPanel Margin="0 20 0 0">
+            <TextBox FontSize="18" Header="Email" x:Name="email"/>
+            <TextBlock x:Name="errEmail" Foreground="Red" Text=""/>
+        </StackPanel>
+        <StackPanel Margin="0 20 0 0">
+            <TextBox FontSize="18" Header="Phone" x:Name="phone"/>
+            <TextBlock x:Name="errPhone" Foreground="Red" Text=""/>
+        </StackPanel>
+        <StackPanel Margin="0 20 0 0">
+            <TextBlock x:Name="errBirthday" Foreground="Red" Text=""/>
+            <CalendarDatePicker FontSize="18" DateChanged="Birthday_OnDateChanged" Header="Birthday" x:Name="birthday" />
+        </StackPanel>
+        <StackPanel Margin="0 20 0 0">
+            <TextBlock FontSize="18" Margin="0">Gender</TextBlock>
+            <StackPanel Margin="100 10 0 0 " Orientation="Horizontal">
+                <RadioButton GroupName="Gender" Tag="Male" Checked="Gender_Choose">Male</RadioButton>
+                <RadioButton GroupName="Gender" Tag="Female" Checked="Gender_Choose">Female</RadioButton>
+                <RadioButton GroupName="Gender" Tag="Other" Checked="Gender_Choose" IsChecked="True">Other</RadioButton>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="0 20 0 0">
+            <TextBlock FontSize="18" Margin="0">Status</TextBlock>
+            <StackPanel Margin="100 10 0 0 " Orientation="Horizontal">
+                <RadioButton GroupName="Status" Tag="Active" Checked="Status_Choose" IsChecked="True">Active</RadioButton>
+                <RadioButton GroupName="Status" Tag="Deactive" Checked="Status_Choose">Deactive</RadioButton>
+            </StackPanel>
+        </StackPanel>
+        <Button Background="#81b9bf" Height="35" Margin="50" Width="100" Click="Button_Click" >Add</Button>
+        <HyperlinkButton Click="ButtonBase_OnClick">List student</HyperlinkButton>
+    </StackPanel>
+</Page>
