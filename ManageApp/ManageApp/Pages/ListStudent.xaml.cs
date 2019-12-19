@@ -40,5 +40,10 @@ namespace ManageApp.Pages
         {
             this.Frame.Navigate(typeof(StudentForm));
         }
+
+        private void lsST_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        } 
     }
 }

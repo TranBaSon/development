@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="ManageApp.Pages.StudentDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ManageApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="Aquamarine">
+        <HyperlinkButton x:ConnectionId='2' FontSize="20"                              >back to list</HyperlinkButton>
+    </Grid>
+</Page>
+

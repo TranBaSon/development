@@ -1,9 +1,12 @@
 ﻿using ManageApp.Models;
 using ManageApp.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -51,15 +54,17 @@ namespace ManageApp.Pages
             st.Status = _choosedStatus;
             st.Birthday = _birthday;
             st.CreatedAt = DateTime.Now;
-       
+            Debug.WriteLine(JsonConvert.SerializeObject(st));
+        
             _service.Create(st);
+            HttpClient client = new HttpClient();
         }
 
         private void Gender_Choose(object sender, RoutedEventArgs e)
         {
             var choosedRadioButton = sender as RadioButton;
             if (choosedRadioButton == null)
-            {
+            { 
                 return;
             }
             switch (choosedRadioButton.Tag)

@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="musicApp.Pages.RegisterSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:musicApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Margin="80">
+        <TextBlock Grid.Row="0" Text="Register song" Style="{StaticResource TitleTextBlockStyle}"/>
+            <StackPanel>
+                <TextBox VerticalAlignment="Center" x:Name="songName" Header= "Song Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="songNameErr" Margin="0 10 0 0"  VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel >
+                <TextBox VerticalAlignment="Center" x:Name="author" Header= "Author" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="authorErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text=""/>
+            </StackPanel>
+            <StackPanel>
+            <TextBox VerticalAlignment="Center" x:Name="singerName" Header= "Singer Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="singerNameErr" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel >
+            <TextBox VerticalAlignment="Center" x:Name="thumbnail" Header= "Thumbnail" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <TextBlock Margin="0 10 0 0" Name="thumbnailErr" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel >
+                <TextBox VerticalAlignment="Center" x:Name="link" Header= "Link" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="linkErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Register" Margin="0,24" Click="Button_Register"/>
+                <Button Content="Cancel" Margin="24" Click="Button_Cancel"/>
+            </StackPanel>
+        </StackPanel>
+</Page>

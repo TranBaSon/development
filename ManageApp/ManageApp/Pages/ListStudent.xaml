@@ -9,7 +9,7 @@
     Background="#e5ffff">
 
     <StackPanel >
-        <ListView x:Name="lsST"></ListView>
+        <ListView x:Name="lsST" IsItemClickEnabled="True" ItemClick="lsST_ItemClick"></ListView>
         <HyperlinkButton VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="ButtonBase_OnClick" >Create student</HyperlinkButton>
     </StackPanel>
 </Page>

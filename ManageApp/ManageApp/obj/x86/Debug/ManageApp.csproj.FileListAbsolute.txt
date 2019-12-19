@@ -52,3 +52,14 @@ C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\Li
 C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\ListStudent.g.cs
 C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\ListStudent.xaml
 C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\ListStudent.xbf
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\bin\x86\Debug\Pages\StudentDetail.xbf
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\StudentDetail.g.i.cs
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\StudentDetail.g.cs
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\StudentDetail.xaml
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Pages\StudentDetail.xbf
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\bin\x86\Debug\Example\GridDemo.xbf
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Example\GridDemo.g.i.cs
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Example\GridDemo.g.cs
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Example\GridDemo.xaml
+C:\Users\Tran Son\Desktop\development\ManageApp\ManageApp\obj\x86\Debug\Example\GridDemo.xbf

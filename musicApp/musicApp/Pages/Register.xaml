@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="musicApp.Pages.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:musicApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid Margin="50">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Register" Style="{StaticResource TitleTextBlockStyle}"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <StackPanel>
+                <TextBox VerticalAlignment="Center" x:Name="firstName" Header= "First Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="fstNameErr" Margin="0 10 0 0"  VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel >
+                <TextBox VerticalAlignment="Center" x:Name="lastName" Header= "Last Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="lstNameErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text=""/>
+            </StackPanel>
+            <StackPanel>
+                <TextBox VerticalAlignment="Center" x:Name="email" Header= "Email" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="emailErr" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel >
+                <TextBox VerticalAlignment="Center" x:Name="password" Header= "Password" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock Margin="0 10 0 0" Name="passwordErr" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel >
+                <TextBox VerticalAlignment="Center" x:Name="cfPpassword" Header= "Confirm password" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="cfPasswordErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Register" Margin="0,24" Click="Button_Register"/>
+                <Button Content="Cancel" Margin="24" Click="Button_Cancel"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <StackPanel >
+                <TextBox VerticalAlignment="Center" x:Name="address" Header= "Address" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="addressErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel>
+                <TextBox VerticalAlignment="Center" x:Name="phone" Header= "Phone number" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:Name="phoneErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+            </StackPanel>
+            <StackPanel>
+                <TextBox VerticalAlignment="Center" x:Name="avatar" Header= "Avatar link" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            </StackPanel>
+            <StackPanel Margin="20" Orientation="Horizontal">
+                <RadioButton GroupName="Gender" Tag="Male" Checked="Gender_Choose">Male</RadioButton>
+                <RadioButton GroupName="Gender" Tag="Female" Checked="Gender_Choose">Female</RadioButton>
+                <RadioButton GroupName="Gender" Tag="Other" Checked="Gender_Choose" IsChecked="True">Other</RadioButton>
+            </StackPanel>
+            <CalendarDatePicker Margin="0 20 0 0" DateChanged="birthday_DateChanged" Header="Birthday" x:Name="birthday" />
+        </StackPanel>
+    </Grid>
+    
+</Page>
