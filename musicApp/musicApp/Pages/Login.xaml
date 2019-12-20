@@ -15,7 +15,7 @@
             <TextBlock x:Name="emailErr" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="Red" Text="" />
         </StackPanel>
         <StackPanel >
-            <TextBox VerticalAlignment="Center" x:Name="password" Header= "Password" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <PasswordBox VerticalAlignment="Center" x:Name="password" Header= "Password" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
             <TextBlock Margin="0 10 0 0" Name="passwordErr" VerticalAlignment="Bottom" Foreground="Red" Text="" />
         </StackPanel>
         <StackPanel Orientation="Horizontal">
