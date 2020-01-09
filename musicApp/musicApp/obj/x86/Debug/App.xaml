@@ -3,6 +3,20 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:musicApp">
+    <Application.Resources>
 
+        <AcrylicBrush x:Key="CustomAcrylicDark"
+                      BackgroundSource="HostBackdrop"
+                      TintColor="#bbded6"
+                      TintOpacity="0.6"
+                      FallbackColor="White"/>
+        <SolidColorBrush x:Key="NavigationViewExpandedPaneBackground" Color="#bbded6"/>
+        <SolidColorBrush x:Key="NavigationViewDefaultPaneBackground" Color="#bbded6" />
+        <AcrylicBrush x:Key="CustomAcrylicLight"
+                      BackgroundSource="HostBackdrop"
+                      TintColor="White"
+                      TintOpacity="0.6"
+                      FallbackColor="White"/>
+    </Application.Resources>
 </Application>
 

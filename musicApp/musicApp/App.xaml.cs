@@ -1,8 +1,11 @@
-﻿using System;
+﻿using musicApp.Models;
+using musicApp.Services;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -22,12 +25,19 @@ namespace musicApp
     /// </summary>
     sealed partial class App : Application
     {
+        public static string token;
+        private static Song currentSong;
+        public static bool _isPlaying = false;
+
+        internal static Song CurrentSong { get => currentSong; set => currentSong = value; }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
         {
+            token = Task.Run(async () => await HandlerFileService.ReadFile("token.txt")).Result;
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -66,7 +76,7 @@ namespace musicApp
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(Pages.frameMenu), e.Arguments);
+                    rootFrame.Navigate(typeof(Pages.Navigatior), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

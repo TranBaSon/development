@@ -16,54 +16,55 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Register" Style="{StaticResource TitleTextBlockStyle}"/>
         <StackPanel Grid.Row="1" Grid.Column="0">
             <StackPanel>
-                <TextBox x:ConnectionId='21' VerticalAlignment="Center" x:Name="firstName" Header= "First Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='22' x:Name="fstNameErr" Margin="0 10 0 0"  VerticalAlignment="Bottom" Foreground="Red" Text="" />
+                <TextBox x:ConnectionId='24' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="TxtFirstName" Header= "First Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='25' x:Name="ErrFirstName" Margin="0 10 0 0"  VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
             </StackPanel>
             <StackPanel >
-                <TextBox x:ConnectionId='19' VerticalAlignment="Center" x:Name="lastName" Header= "Last Name" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='20' x:Name="lstNameErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text=""/>
+                <TextBox x:ConnectionId='22' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="TxtLastName" Header= "Last Name" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='23' x:Name="ErrLastName" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text=""/>
             </StackPanel>
             <StackPanel>
-                <TextBox x:ConnectionId='17' VerticalAlignment="Center" x:Name="email" Header= "Email" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='18' x:Name="emailErr" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+                <TextBox x:ConnectionId='20' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="TxtEmail" Header= "Email" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='21' x:Name="ErrEmail" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
             </StackPanel>
             <StackPanel >
-                <TextBox x:ConnectionId='15' VerticalAlignment="Center" x:Name="password" Header= "Password" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='16' Margin="0 10 0 0" Name="passwordErr" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+                <PasswordBox x:ConnectionId='18' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="PwdPassword" Header= "Password" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='19' Margin="0 10 0 0" Name="ErrPassword" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
             </StackPanel>
             <StackPanel >
-                <TextBox x:ConnectionId='13' VerticalAlignment="Center" x:Name="cfPpassword" Header= "Confirm password" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='14' x:Name="cfPasswordErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+                <PasswordBox x:ConnectionId='16' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="CfPassword" Header= "Confirm password" Margin="0,24,0,0" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='17' x:Name="ErrCfPassword" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
             </StackPanel>
             
             <StackPanel Orientation="Horizontal">
-                <Button x:ConnectionId='11' Content="Register" Margin="0,24"                        />
-                <Button x:ConnectionId='12' Content="Cancel" Margin="24"                      />
+                <Button x:ConnectionId='14' Background="#40bfc1" Foreground="#004445"  Content="Register" Margin="0,24"                        />
+                <Button x:ConnectionId='15' Background="#40bfc1" Foreground="#004445" Content="Cancel" Margin="24"                      />
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1">
             <StackPanel >
-                <TextBox x:ConnectionId='9' VerticalAlignment="Center" x:Name="address" Header= "Address" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='10' x:Name="addressErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+                <TextBox x:ConnectionId='12' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="TxtAddress" Header= "Address" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='13' x:Name="ErrAddress" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
             </StackPanel>
             <StackPanel>
-                <TextBox x:ConnectionId='7' VerticalAlignment="Center" x:Name="phone" Header= "Phone number" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='8' x:Name="phoneErr" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="Red" Text="" />
+                <TextBox x:ConnectionId='10' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="TxtPhone" Header= "Phone number" Margin="0,24,0,0" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='11' x:Name="ErrPhone" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
             </StackPanel>
             <StackPanel>
-                <TextBox x:ConnectionId='6' VerticalAlignment="Center" x:Name="avatar" Header= "Avatar link" Margin="0,24,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBox x:ConnectionId='8' Foreground="#004445" BorderBrush="#40bfc1"  TextWrapping="Wrap" VerticalAlignment="Center" x:Name="TxtAvatar" Header= "Avatar link" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+                <TextBlock x:ConnectionId='9' x:Name="ErrAvatar" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
             </StackPanel>
             <StackPanel Margin="20" Orientation="Horizontal">
-                <RadioButton x:ConnectionId='3' GroupName="Gender" Tag="Male"                        >Male</RadioButton>
-                <RadioButton x:ConnectionId='4' GroupName="Gender" Tag="Female"                        >Female</RadioButton>
-                <RadioButton x:ConnectionId='5' GroupName="Gender" Tag="Other"                         IsChecked="True">Other</RadioButton>
+                <RadioButton x:ConnectionId='5' Foreground="#004445" BorderBrush="#40bfc1" GroupName="Gender" Tag="Male"                        >Male</RadioButton>
+                <RadioButton x:ConnectionId='6' Foreground="#004445" BorderBrush="#40bfc1" GroupName="Gender" Tag="Female"                        >Female</RadioButton>
+                <RadioButton x:ConnectionId='7' Foreground="#004445" BorderBrush="#40bfc1" GroupName="Gender" Tag="Other"                         IsChecked="True">Other</RadioButton>
             </StackPanel>
-            <CalendarDatePicker x:ConnectionId='2' Margin="0 20 0 0"                                    Header="Birthday" x:Name="birthday" />
+            <TextBlock x:ConnectionId='2' x:Name="ErrGender" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
+            <CalendarDatePicker x:ConnectionId='3' Foreground="#004445" BorderBrush="#40bfc1" Margin="0 20 0 0"                                    Header="Birthday" x:Name="birthday" />
+            <TextBlock x:ConnectionId='4' x:Name="ErrBirtDay" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
         </StackPanel>
     </Grid>
     

@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="musicApp.Pages.Navigatior"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:musicApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Windows.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <muxc:NavigationView x:ConnectionId='2'  IsBackButtonVisible="Collapsed" Header="ZMusic"                                              x:Name="SANav" PaneTitle="" >
+            <muxc:NavigationView.MenuItems >
+                
+                <muxc:NavigationViewItem Icon="Contact" Content="Login" Tag="login" />
+                <muxc:NavigationViewItem Icon="Account" Content="Register" Tag="register" />
+                <muxc:NavigationViewItem Icon="ViewAll" Content="List Song" Tag="listSong" />
+                <muxc:NavigationViewItem Icon="MusicInfo" Content="My Song" Tag="mySong" />
+                <muxc:NavigationViewItem Icon="Add" Content="Register Song" Tag="registerSong" />
+                <muxc:NavigationViewItem Icon="ContactInfo" Content="infor" Tag="infor" />
+                <muxc:NavigationViewItem Icon="Download" Content="handler file" Tag="handlerFile" />
+            </muxc:NavigationView.MenuItems>
+            <Frame x:ConnectionId='3' x:Name="contentFrame"/>
+            <NavigationView.PaneFooter >
+                <muxc:NavigationViewItem x:ConnectionId='4'                                    Icon="Share" Content="Sign Out" Tag="signOut" />
+            </NavigationView.PaneFooter>
+            
+                
+        </muxc:NavigationView>
+    </Grid>
+</Page>
+

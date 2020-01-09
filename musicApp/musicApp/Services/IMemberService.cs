@@ -9,7 +9,8 @@ namespace musicApp.Services
 {
     interface IMemberService
     {
-        bool Login(string email, string password);
-        bool Register(Member member);
+        Task<string> Login(string email, string password);
+        Task<bool> Register(Member member);
+        Task<Member> GetMemberInformation(string token);
     }
 }

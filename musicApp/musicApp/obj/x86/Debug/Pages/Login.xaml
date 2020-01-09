@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="musicApp.Pages.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:musicApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Margin="100">
+        <TextBlock x:ConnectionId='2' x:Name="statusLogin" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
+        <StackPanel>
+            <TextBox x:ConnectionId='7' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="txtEmail"                         Header= "Email" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <TextBlock x:ConnectionId='8' x:Name="Erremail" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
+        </StackPanel>
+        <StackPanel >
+            <PasswordBox x:ConnectionId='5' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="txtPassword"                         Header= "Password" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <TextBlock x:ConnectionId='6' Margin="0 10 0 0" Name="Errpassword" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='3' Background="#40bfc1" Foreground="#004445" Content="Login" Margin="0,24"                     />
+            <Button x:ConnectionId='4' Background="#40bfc1" Foreground="#004445" Content="Cancel" Margin="24"                      />
+        </StackPanel>
+    </StackPanel>
+</Page>
+
