@@ -9,12 +9,14 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Core;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -62,7 +64,6 @@ namespace musicApp.Pages
             _songService = new SongService();
             Songs.ItemsSource = null;
             Songs.ItemsSource = _songService.LoadSongs(App.token);
-
         }
 
         [Obsolete]
@@ -74,6 +75,9 @@ namespace musicApp.Pages
             PlayButton.Icon = new SymbolIcon(Symbol.Pause);
             _isPlaying = true;
             StatusText.Text = "Now Playing: " + currentSong.name;
+            //avatarBar.Source = new BitmapImage(new Uri(currentSong.thumbnail));
+            testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
+
         }
 
         [Obsolete]
@@ -84,6 +88,7 @@ namespace musicApp.Pages
             {
                 currentSong = _songService.LoadSongs(App.token).FirstOrDefault();
                 MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+                testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
                 Songs.SelectedIndex = 0;
             }
 
@@ -101,7 +106,7 @@ namespace musicApp.Pages
                 StatusText.Text = "Now Playing: " + currentSong.name;
                 _isPlaying = true;
             }
-
+            Debug.WriteLine(currentSong.thumbnail);
         }
 
         private void Next_OnClick(object sender, RoutedEventArgs e)
@@ -115,6 +120,7 @@ namespace musicApp.Pages
             currentSong = Songs.Items[currentIndex] as Song;
             Songs.SelectedIndex = currentIndex;
             MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+            testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
             MyPlayer.MediaPlayer.Play();
             PlayButton.Icon = new SymbolIcon(Symbol.Pause);
             _isPlaying = true;
@@ -132,6 +138,7 @@ namespace musicApp.Pages
             currentSong = Songs.Items[currentIndex] as Song;
             Songs.SelectedIndex = currentIndex;
             MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+            testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
             MyPlayer.MediaPlayer.Play();
             PlayButton.Icon = new SymbolIcon(Symbol.Pause);
             _isPlaying = true;
@@ -145,6 +152,18 @@ namespace musicApp.Pages
             {
                 MyPlayer.MediaPlayer.Position = TimeSpan.FromSeconds(timelineSlider.Value);
             }
+        }
+
+        protected async override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            base.OnNavigatingFrom(e);
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                if(MyPlayer?.MediaPlayer != null)
+                {
+                    MyPlayer?.MediaPlayer.Dispose();
+                }
+            });
         }
     }
 

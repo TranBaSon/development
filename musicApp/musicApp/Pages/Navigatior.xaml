@@ -19,7 +19,6 @@
                 <muxc:NavigationViewItem Icon="MusicInfo" Content="My Song" Tag="mySong" />
                 <muxc:NavigationViewItem Icon="Add" Content="Register Song" Tag="registerSong" />
                 <muxc:NavigationViewItem Icon="ContactInfo" Content="infor" Tag="infor" />
-                <muxc:NavigationViewItem Icon="Download" Content="handler file" Tag="handlerFile" />
             </muxc:NavigationView.MenuItems>
             <Frame x:Name="contentFrame"/>
             <NavigationView.PaneFooter >

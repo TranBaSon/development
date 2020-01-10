@@ -15,23 +15,23 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
-            <ListView x:ConnectionId='11' x:Name="Songs"                               Height="900" IsItemClickEnabled="True" ScrollViewer.VerticalScrollBarVisibility="Auto"
+            <ListView x:ConnectionId='12' x:Name="Songs"                               Height="900" IsItemClickEnabled="True" ScrollViewer.VerticalScrollBarVisibility="Auto"
             ScrollViewer.VerticalScrollMode="Enabled">
                 <ListView.ItemTemplate>
                     <DataTemplate                         >
-                        <Grid x:ConnectionId='13' Margin="0,12,0,12"                                          >
+                        <Grid x:ConnectionId='14' Margin="0,12,0,12"                                          >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" MinWidth="150"/>
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Image x:ConnectionId='14'                             MaxWidth="100" Stretch="Fill"/>
+                            <Image x:ConnectionId='15'                             MaxWidth="100" Stretch="Fill"/>
                             <StackPanel Margin="12,0,0,0" Grid.Column="1" >
-                                <TextBlock x:ConnectionId='15'                      FontFamily="Segoe UI" FontSize="14" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="0,0,0,6" LineHeight="20"/>
+                                <TextBlock x:ConnectionId='16'                      FontFamily="Segoe UI" FontSize="14" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="0,0,0,6" LineHeight="20"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock x:ConnectionId='17'                        FontFamily="Segoe UI" FontWeight="Normal" LineHeight="20" Style="{ThemeResource BodyTextBlockStyle}" TextTrimming="CharacterEllipsis" Width="350" MaxLines="1"/>
+                                    <TextBlock x:ConnectionId='18'                        FontFamily="Segoe UI" FontWeight="Normal" LineHeight="20" Style="{ThemeResource BodyTextBlockStyle}" TextTrimming="CharacterEllipsis" Width="350" MaxLines="1"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock x:ConnectionId='16'                        FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,0,0,0"/>
+                                    <TextBlock x:ConnectionId='17'                        FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,0,0,0"/>
                                     <TextBlock Text="" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
                                 </StackPanel>
                             </StackPanel>
@@ -43,37 +43,44 @@
 
         <StackPanel VerticalAlignment="Bottom" Grid.Row="1" Background="#bbded6">
 
-            <StackPanel>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock x:ConnectionId='8' Text="00:00" Name="currentTime" Margin="20 10" HorizontalAlignment="Center" />
-                    <Slider x:ConnectionId='9'  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="900" Minimum="0" x:Name="timelineSlider"                                            />
-                    <TextBlock x:ConnectionId='10' Text="00:00" Margin="20 10" Name="totalTime" HorizontalAlignment="Center" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="0">
+                    <PersonPicture x:ConnectionId='11' VerticalAlignment="Center" HorizontalAlignment="Stretch"  Width="75" Height="75" x:Name="testav" ProfilePicture="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/98381915/original/9a98da91fcc1709763e92016d13756af640abcb7/design-minimalist-flat-line-vector-avatar-of-you.jpg"  />
                 </StackPanel>
-                <CommandBar HorizontalAlignment="Center" Background="#bbded6">
-                    
-                    <AppBarToggleButton Icon="Shuffle" Label="Shuffle"/>
-                    <AppBarToggleButton Icon="RepeatAll" Label="Repeat"/>
-                    <AppBarSeparator/>
-                    <AppBarButton x:ConnectionId='4' Icon="Back" Label="Previous"                         />
-                    <AppBarButton x:ConnectionId='5' x:Name="PlayButton" Icon="Play" Label="Play"                           />
-                    <AppBarButton x:ConnectionId='6' Icon="Forward" Label="Next"                     />
+                <StackPanel Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:ConnectionId='8' Text="00:00" Name="currentTime" Margin="20 10" HorizontalAlignment="Center" />
+                        <Slider x:ConnectionId='9'  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="900" Minimum="0" x:Name="timelineSlider"                                            />
+                        <TextBlock x:ConnectionId='10' Text="00:00" Margin="20 10" Name="totalTime" HorizontalAlignment="Center" />
+                    </StackPanel>
+                    <CommandBar HorizontalAlignment="Center" Background="#bbded6">
 
-                    <CommandBar.SecondaryCommands>
-                        <AppBarButton Label="Like"/>
-                        <AppBarButton Label="Dislike"/>
-                    </CommandBar.SecondaryCommands>
+                        <AppBarToggleButton Icon="Shuffle" Label="Shuffle"/>
+                        <AppBarToggleButton Icon="RepeatAll" Label="Repeat"/>
+                        <AppBarSeparator/>
+                        <AppBarButton x:ConnectionId='4' Icon="Back" Label="Previous"                         />
+                        <AppBarButton x:ConnectionId='5' x:Name="PlayButton" Icon="Play" Label="Play"                           />
+                        <AppBarButton x:ConnectionId='6' Icon="Forward" Label="Next"                     />
 
-                    <CommandBar.Content>
-                        <TextBlock x:ConnectionId='7' HorizontalAlignment="Left" x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
-                    </CommandBar.Content>
+                        <CommandBar.SecondaryCommands>
+                            <AppBarButton Label="Like"/>
+                            <AppBarButton Label="Dislike"/>
+                        </CommandBar.SecondaryCommands>
 
-                </CommandBar>
-                
-            </StackPanel>
+                        <CommandBar.Content>
+                            <TextBlock x:ConnectionId='7' HorizontalAlignment="Left" x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
+                        </CommandBar.Content>
 
+                    </CommandBar>
+                </StackPanel>
+            </Grid>
 
-            <MediaPlayerElement x:ConnectionId='3' x:Name="MyPlayer" />
-            
+            <MediaPlayerElement x:ConnectionId='3'  x:Name="MyPlayer" />
+
         </StackPanel>
 
     </Grid>

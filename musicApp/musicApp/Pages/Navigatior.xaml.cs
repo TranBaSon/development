@@ -76,9 +76,6 @@ namespace musicApp.Pages
                         goToLogin();
                     }
                     break;
-                case "handlerFile":
-                    contentFrame.Navigate(typeof(Pages.testFile));
-                    break;
                 case "infor":
                     if (App.token.Length > 0)
                     {

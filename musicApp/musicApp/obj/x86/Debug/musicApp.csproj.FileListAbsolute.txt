@@ -68,11 +68,6 @@ C:\Users\Tran Son\Desktop\development\musicApp\musicApp\obj\x86\Debug\Pages\Navi
 C:\Users\Tran Son\Desktop\development\musicApp\musicApp\obj\x86\Debug\Pages\Navigatior.xaml
 C:\Users\Tran Son\Desktop\development\musicApp\musicApp\obj\x86\Debug\Pages\Navigatior.xbf
 C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Newtonsoft.Json.dll
-C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\testFile.xbf
-C:\Users\Tran Son\Desktop\development\musicApp\musicApp\obj\x86\Debug\Pages\testFile.g.i.cs
-C:\Users\Tran Son\Desktop\development\musicApp\musicApp\obj\x86\Debug\Pages\testFile.g.cs
-C:\Users\Tran Son\Desktop\development\musicApp\musicApp\obj\x86\Debug\Pages\testFile.xaml
-C:\Users\Tran Son\Desktop\development\musicApp\musicApp\obj\x86\Debug\Pages\testFile.xbf
 C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Aspose.Pdf.dll
 C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Microsoft.Extensions.DependencyModel.dll

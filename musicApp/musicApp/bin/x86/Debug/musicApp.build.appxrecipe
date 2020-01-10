@@ -112,9 +112,6 @@
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\RegisterSong.xbf">
       <PackagePath>Pages\RegisterSong.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\testFile.xbf">
-      <PackagePath>Pages\testFile.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

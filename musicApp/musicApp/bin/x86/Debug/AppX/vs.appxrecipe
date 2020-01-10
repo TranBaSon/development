@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-01-09T11:14:49.089</Modified>
+      <Modified>2020-01-10T17:12:18.388</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\musicApp.exe">
       <PackagePath>entrypoint\musicApp.exe</PackagePath>
-      <Modified>2020-01-09T11:14:48.660</Modified>
+      <Modified>2020-01-10T17:12:17.587</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\.nuget\packages\aspose.pdf\20.1.0\lib\netstandard2.0\Aspose.Pdf.dll">
       <PackagePath>Aspose.Pdf.dll</PackagePath>
@@ -110,47 +110,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\musicApp.xr.xml">
       <PackagePath>musicApp.xr.xml</PackagePath>
-      <Modified>2020-01-09T11:04:25.244</Modified>
+      <Modified>2020-01-10T17:12:17.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.355</Modified>
+      <Modified>2020-01-10T17:12:17.295</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.355</Modified>
+      <Modified>2020-01-10T17:12:17.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\ListSong.xbf">
       <PackagePath>Pages\ListSong.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.355</Modified>
+      <Modified>2020-01-10T17:12:17.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\Login.xbf">
       <PackagePath>Pages\Login.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.356</Modified>
+      <Modified>2020-01-10T17:12:17.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\MemberInformation.xbf">
       <PackagePath>Pages\MemberInformation.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.356</Modified>
+      <Modified>2020-01-10T17:12:17.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\MySong.xbf">
       <PackagePath>Pages\MySong.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.356</Modified>
+      <Modified>2020-01-10T17:12:17.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\Navigatior.xbf">
       <PackagePath>Pages\Navigatior.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.356</Modified>
+      <Modified>2020-01-10T17:12:17.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\Register.xbf">
       <PackagePath>Pages\Register.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.351</Modified>
+      <Modified>2020-01-10T17:12:17.293</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\RegisterSong.xbf">
       <PackagePath>Pages\RegisterSong.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.356</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Pages\testFile.xbf">
-      <PackagePath>Pages\testFile.xbf</PackagePath>
-      <Modified>2020-01-09T11:14:20.357</Modified>
+      <Modified>2020-01-10T17:12:17.296</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -158,11 +154,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-01-09T11:14:20.727</Modified>
+      <Modified>2020-01-10T17:12:17.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tran Son\Desktop\development\musicApp\musicApp\bin\x86\Debug\Core\musicApp.exe">
       <PackagePath>musicApp.exe</PackagePath>
-      <Modified>2020-01-09T11:14:49.085</Modified>
+      <Modified>2020-01-10T17:12:18.383</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

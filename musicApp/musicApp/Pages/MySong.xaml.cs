@@ -9,12 +9,14 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Core;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -70,6 +72,7 @@ namespace musicApp.Pages
         {
             currentSong = e.ClickedItem as Song;
             MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+            testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
             MyPlayer.MediaPlayer.Play();
             PlayButton.Icon = new SymbolIcon(Symbol.Pause);
             _isPlaying = true;
@@ -85,6 +88,7 @@ namespace musicApp.Pages
             {
                 currentSong = _songService.LoadMySongs(App.token).FirstOrDefault();
                 MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+                testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
                 Songs.SelectedIndex = 0;
             }
 
@@ -116,6 +120,7 @@ namespace musicApp.Pages
             currentSong = Songs.Items[currentIndex] as Song;
             Songs.SelectedIndex = currentIndex;
             MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+            testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
             MyPlayer.MediaPlayer.Play();
             PlayButton.Icon = new SymbolIcon(Symbol.Pause);
             _isPlaying = true;
@@ -133,6 +138,7 @@ namespace musicApp.Pages
             currentSong = Songs.Items[currentIndex] as Song;
             Songs.SelectedIndex = currentIndex;
             MyPlayer.Source = MediaSource.CreateFromUri(new Uri(currentSong.link));
+            testav.ProfilePicture = new BitmapImage(new Uri(currentSong.thumbnail));
             MyPlayer.MediaPlayer.Play();
             PlayButton.Icon = new SymbolIcon(Symbol.Pause);
             _isPlaying = true;
@@ -148,7 +154,18 @@ namespace musicApp.Pages
             }
         }
 
-      
+        protected async override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            base.OnNavigatingFrom(e);
+            await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                if (MyPlayer?.MediaPlayer != null)
+                {
+                    MyPlayer?.MediaPlayer.Dispose();
+                }
+            });
+        }
+
     }
 }
 

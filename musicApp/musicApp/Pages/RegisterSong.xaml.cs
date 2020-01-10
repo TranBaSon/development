@@ -2,11 +2,13 @@
 using musicApp.Services;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,13 +27,15 @@ namespace musicApp.Pages
     public sealed partial class RegisterSong : Page
     {
         private ISongService _service;
+        private string urlSong = "";
+        StorageFile fileSlected;
         public RegisterSong()
         {
             this.InitializeComponent();
             _service = new SongService();
         }
 
-        private void Button_Register(object sender, RoutedEventArgs e)
+        private async void Button_Register(object sender, RoutedEventArgs e)
         {
             var song = new Song
             {
@@ -39,19 +43,23 @@ namespace musicApp.Pages
                 author = author.Text,
                 singer = singerName.Text,
                 thumbnail = thumbnail.Text,
-                link = link.Text,
             };
             var errors = song.CheckValidate();
-
-            if (errors.Count > 0)
+            if(fileSlected == null)
+            {
+                errors.Add("ErrFile", "File is required!");
+            }
+            if (errors.Count > 0 && fileSlected == null)
             {
                 ErSongName.Text = errors.ContainsKey("Name") ? errors["Name"] : "";
                 ErrSingerName.Text = errors.ContainsKey("Singer") ? errors["Singer"] : "";
-                ErrLink.Text = errors.ContainsKey("Link") ? errors["Link"] : "";
                 ErrAuthor.Text = errors.ContainsKey("Author") ? errors["Author"] : "";
                 ErrThumbnail.Text = errors.ContainsKey("Thumbnail") ? errors["Thumbnail"] : "";
+                ErrFile.Text = errors.ContainsKey("ErrFile") ? errors["ErrFile"] : "";
             }
             else {
+                var url = await _service.postFile(fileSlected);
+                song.link = url;
                 bool status = _service.RegisterSong(song, App.token);
                 if (status)
                 {
@@ -64,6 +72,27 @@ namespace musicApp.Pages
         private void Button_Cancel(object sender, RoutedEventArgs e)
         {
             Navigatior.GetCurrent().SetSelectedNavigationItem(2);
+        }
+
+        private async void getFile_Click(object sender, RoutedEventArgs e)
+        {
+            var savePicker = new Windows.Storage.Pickers.FileSavePicker();
+            savePicker.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            //// Dropdown of file types the user can save the file as
+            savePicker.FileTypeChoices.Add("the song", new List<string>() { ".mp3" });
+            //// Default file name if the user does not type one in or select a file to replace
+            savePicker.SuggestedFileName = "New Document";
+            var file = await savePicker.PickSaveFileAsync();
+            if (file != null)
+            {
+                Debug.WriteLine(file.ContentType);
+                //var url = await _service.postFile(file);
+                Debug.WriteLine("--------------------------------------");
+                //Debug.WriteLine(url);
+                fileName.Text = file.DisplayName;
+                fileSlected = file;
+            }
         }
     }
 }

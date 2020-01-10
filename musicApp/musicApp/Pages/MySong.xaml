@@ -43,37 +43,44 @@
 
         <StackPanel VerticalAlignment="Bottom" Grid.Row="1" Background="#bbded6">
 
-            <StackPanel>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Text="00:00" Name="currentTime" Margin="20 10" HorizontalAlignment="Center" />
-                    <Slider  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="900" Minimum="0" x:Name="timelineSlider" ValueChanged="timelineSlider_ValueChanged" />
-                    <TextBlock Text="00:00" Margin="20 10" Name="totalTime" HorizontalAlignment="Center" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="0">
+                    <PersonPicture VerticalAlignment="Center" HorizontalAlignment="Stretch"  Width="75" Height="75" x:Name="testav" ProfilePicture="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/98381915/original/9a98da91fcc1709763e92016d13756af640abcb7/design-minimalist-flat-line-vector-avatar-of-you.jpg"  />
                 </StackPanel>
-                <CommandBar HorizontalAlignment="Center" Background="#bbded6">
-                    
-                    <AppBarToggleButton Icon="Shuffle" Label="Shuffle"/>
-                    <AppBarToggleButton Icon="RepeatAll" Label="Repeat"/>
-                    <AppBarSeparator/>
-                    <AppBarButton Icon="Back" Label="Previous" Click="Previous_OnClick"/>
-                    <AppBarButton x:Name="PlayButton" Icon="Play" Label="Play" Click="PlayButton_Clicked"/>
-                    <AppBarButton Icon="Forward" Label="Next" Click="Next_OnClick"/>
+                <StackPanel Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="00:00" Name="currentTime" Margin="20 10" HorizontalAlignment="Center" />
+                        <Slider  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="900" Minimum="0" x:Name="timelineSlider" ValueChanged="timelineSlider_ValueChanged" />
+                        <TextBlock Text="00:00" Margin="20 10" Name="totalTime" HorizontalAlignment="Center" />
+                    </StackPanel>
+                    <CommandBar HorizontalAlignment="Center" Background="#bbded6">
 
-                    <CommandBar.SecondaryCommands>
-                        <AppBarButton Label="Like"/>
-                        <AppBarButton Label="Dislike"/>
-                    </CommandBar.SecondaryCommands>
+                        <AppBarToggleButton Icon="Shuffle" Label="Shuffle"/>
+                        <AppBarToggleButton Icon="RepeatAll" Label="Repeat"/>
+                        <AppBarSeparator/>
+                        <AppBarButton Icon="Back" Label="Previous" Click="Previous_OnClick"/>
+                        <AppBarButton x:Name="PlayButton" Icon="Play" Label="Play" Click="PlayButton_Clicked"/>
+                        <AppBarButton Icon="Forward" Label="Next" Click="Next_OnClick"/>
 
-                    <CommandBar.Content>
-                        <TextBlock HorizontalAlignment="Left" x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
-                    </CommandBar.Content>
+                        <CommandBar.SecondaryCommands>
+                            <AppBarButton Label="Like"/>
+                            <AppBarButton Label="Dislike"/>
+                        </CommandBar.SecondaryCommands>
 
-                </CommandBar>
-                
-            </StackPanel>
+                        <CommandBar.Content>
+                            <TextBlock HorizontalAlignment="Left" x:Name="StatusText" Text="Now playing..." Margin="12,14"/>
+                        </CommandBar.Content>
 
+                    </CommandBar>
+                </StackPanel>
+            </Grid>
 
-            <MediaPlayerElement x:Name="MyPlayer" />
-            
+            <MediaPlayerElement  x:Name="MyPlayer" />
+
         </StackPanel>
 
     </Grid>

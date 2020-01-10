@@ -19,14 +19,12 @@
                 <muxc:NavigationViewItem Icon="MusicInfo" Content="My Song" Tag="mySong" />
                 <muxc:NavigationViewItem Icon="Add" Content="Register Song" Tag="registerSong" />
                 <muxc:NavigationViewItem Icon="ContactInfo" Content="infor" Tag="infor" />
-                <muxc:NavigationViewItem Icon="Download" Content="handler file" Tag="handlerFile" />
             </muxc:NavigationView.MenuItems>
             <Frame x:ConnectionId='3' x:Name="contentFrame"/>
             <NavigationView.PaneFooter >
                 <muxc:NavigationViewItem x:ConnectionId='4'                                    Icon="Share" Content="Sign Out" Tag="signOut" />
             </NavigationView.PaneFooter>
             
-                
         </muxc:NavigationView>
     </Grid>
 </Page>

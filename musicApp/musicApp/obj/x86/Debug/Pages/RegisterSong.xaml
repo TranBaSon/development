@@ -9,31 +9,33 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Margin="80">
-            <StackPanel>
-                <TextBox x:ConnectionId='12' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="songName" Header= "Song Name" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-            <TextBlock x:ConnectionId='13' x:Name="ErSongName" Margin="0 10 0 0"  VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
-            </StackPanel>
-            <StackPanel >
-                <TextBox x:ConnectionId='10' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="author" Header= "Author" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-            <TextBlock x:ConnectionId='11' x:Name="ErrAuthor" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text=""/>
-            </StackPanel>
-            <StackPanel>
-                <TextBox x:ConnectionId='8' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="singerName" Header= "Singer Name" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='9' x:Name="ErrSingerName" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
-            </StackPanel>
-            <StackPanel >
-                <TextBox x:ConnectionId='6' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="thumbnail" Header= "Thumbnail" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='7' Margin="0 10 0 0" Name="ErrThumbnail" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
-            </StackPanel>
-            <StackPanel >
-                <TextBox x:ConnectionId='4'  Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="link" Header= "Link" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
-                <TextBlock x:ConnectionId='5' x:Name="ErrLink" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <Button x:ConnectionId='2' Background="#40bfc1" Foreground="#004445" Content="Register" Margin="0,24"                        />
-                <Button x:ConnectionId='3' Background="#40bfc1" Foreground="#004445" Content="Cancel" Margin="24"                      />
-            </StackPanel>
+        <StackPanel>
+            <TextBox x:ConnectionId='13' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="songName" Header= "Song Name" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <TextBlock x:ConnectionId='14' x:Name="ErSongName" Margin="0 10 0 0"  VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
         </StackPanel>
+        <StackPanel >
+            <TextBox x:ConnectionId='11' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="author" Header= "Author" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <TextBlock x:ConnectionId='12' x:Name="ErrAuthor" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text=""/>
+        </StackPanel>
+        <StackPanel>
+            <TextBox x:ConnectionId='9' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="singerName" Header= "Singer Name" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <TextBlock x:ConnectionId='10' x:Name="ErrSingerName" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
+        </StackPanel>
+        <StackPanel >
+            <TextBox x:ConnectionId='7' Foreground="#004445" BorderBrush="#40bfc1" VerticalAlignment="Center" x:Name="thumbnail" Header= "Thumbnail" Margin="0,24,0,0"  Width="400" HorizontalAlignment="Left" InputScope="PersonalFullName"/>
+            <TextBlock x:ConnectionId='8' Margin="0 10 0 0" Name="ErrThumbnail" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='5' Background="#40bfc1" Foreground="#004445" x:Name="getFile"                       Content="get song" />
+            <TextBlock x:ConnectionId='6' Margin="20 0" VerticalAlignment="Center" Text="file name" x:Name="fileName" />
+        </StackPanel>
+        <TextBlock x:ConnectionId='2' x:Name="ErrFile" Margin="0 10 0 0" VerticalAlignment="Bottom" Foreground="#fa163f" Text="" />
+
+
+        <StackPanel Orientation="Horizontal">
+            <Button x:ConnectionId='3' Background="#40bfc1" Foreground="#004445" Content="Register" Margin="0,24"                        />
+            <Button x:ConnectionId='4' Background="#40bfc1" Foreground="#004445" Content="Cancel" Margin="24"                      />
+        </StackPanel>
+    </StackPanel>
 </Page>
 

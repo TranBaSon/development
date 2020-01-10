@@ -145,9 +145,6 @@
     <Compile Include="Pages\RegisterSong.xaml.cs">
       <DependentUpon>RegisterSong.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\testFile.xaml.cs">
-      <DependentUpon>testFile.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ApiMemberService.cs" />
     <Compile Include="Services\HandlerFileService.cs" />
@@ -204,10 +201,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\RegisterSong.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\testFile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
