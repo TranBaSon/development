@@ -36,20 +36,20 @@ namespace musicApp.Pages
             if (memberInfo != null)
             {
                 avatar.Source = new BitmapImage(new Uri(memberInfo.avatar));
-                firstName.Text = memberInfo.firstName;
-                lastName.Text = memberInfo.lastName;
-                email.Text = memberInfo.email;
-                phone.Text = memberInfo.phone;
-                address.Text = memberInfo.address;
-                birthday.Text = memberInfo.birthday;
+                firstName.Text = "First Name: " + memberInfo.firstName;
+                lastName.Text = "Last Name: " + memberInfo.lastName;
+                email.Text = "Email: " +  memberInfo.email;
+                phone.Text = "Phone Number: " + memberInfo.phone;
+                address.Text = "Address: " + memberInfo.address;
+                birthday.Text = "Birthday: " + memberInfo.birthday;
 
                 switch (memberInfo.gender)
                 {
-                    case 0: gender.Text = "Female";
+                    case 0: gender.Text = "Gender: Female";
                         break;
-                    case 1: gender.Text = "Male";
+                    case 1: gender.Text = "Gender: Male";
                         break;
-                    case 2: gender.Text = "Other";
+                    case 2: gender.Text = "Gender: Other";
                         break;
                 }
             }
