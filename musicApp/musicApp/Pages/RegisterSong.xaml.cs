@@ -91,10 +91,6 @@ namespace musicApp.Pages
             var file = await savePicker.PickSaveFileAsync();
             if (file != null)
             {
-                Debug.WriteLine(file.ContentType);
-                //var url = await _service.postFile(file);
-                Debug.WriteLine("--------------------------------------");
-                //Debug.WriteLine(url);
                 fileName.Text = file.DisplayName;
                 fileSlected = file;
             }
