@@ -59,6 +59,11 @@ namespace musicApp.Pages
             }
             else {
                 var url = await _service.postFile(fileSlected);
+                if (url.Equals(""))
+                {
+                    ErrFile.Text = "Error link!";
+                    return;
+                }
                 song.link = url;
                 bool status = _service.RegisterSong(song, App.token);
                 if (status)

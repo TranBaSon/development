@@ -107,7 +107,11 @@ namespace musicApp.Services
             var stringContent = await response.Content.ReadAsStringAsync();
             Debug.WriteLine(stringContent);
             string url = JObject.Parse(stringContent)["url"].ToString();
-            return url;
+            if(url.Length > 0)
+            {
+                return url;
+            }
+            return "";
 
         }
     }
